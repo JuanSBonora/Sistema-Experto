@@ -1,14 +1,19 @@
 # Sistema Experto
 
-Tarea para la materia de Metodologías de Desarrollo de Sistemas de la carrera de Ingeniería en Sistemas Computacionales de la Universidad Autónoma de Aguascalientes.
+Proyecto para la materia de Sistemas Inteligentes de la carrera de Ingeniería en Tecnologia de Software
 
 ## Instalaciones necesarias
 
-[Node.js](https://expressjs.com/) ([Link de descarga](https://nodejs.org/en/download/current/)) 
+[Node.js](https://nodejs.org/en/)
 
-[Angular](https://nodejs.org/)
+
+[Angular](https://angular.io/)
 ```
 npm install -g @angular/cli
+```
+
+```
+version 6.1.2
 ```
 
 ## Dependencias de Node.js
