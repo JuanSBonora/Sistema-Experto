@@ -1,0 +1,102 @@
+<!-- Custom styles for this template -->
+<div class="bg-dark">
+  <div class="container">
+    <div class="col">
+      <div class="mx-auto col-xl-9">
+        <h1 class="pt-5 pb-5 m-auto text-white text-center display-1">{{ methodology.name }}</h1>
+      </div>
+      <div class="mx-auto col-xl-9">
+        <h3 class="pt-5 pb-5 m-auto text-white-50 text-center display-5">¡Veamos que tiene preparada esta metodología para ti!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="features-icons bg-light text-center pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6  pt-4" *ngIf="methodology.whoItWorks != null">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="fas fa-book-reader m-auto text-primary" style="font-size: 80px;"></i>
+          </div>
+          <h3 class="pt-3 pb-1" >¿Cómo funciona?</h3>
+          <p class="lead mb-0 pb-4 pt-1 text-justify">{{ methodology.whoItWorks }}</p>
+        </div>
+      </div>
+      <div class="col-lg-6 pt-4"  *ngIf="methodology.recommendedProjects != null">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="fas fa-certificate m-auto text-primary" style="font-size: 80px;"></i>
+          </div>
+          <h3 class="pt-3 pb-1" >Proyectos a los que aplica</h3>
+          <p class="lead mb-0 pb-4 pt-1 text-justify">{{ methodology.recommendedProjects }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-dark pb-3">
+      <div class="col-lg-12  pt-4">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="fas fa-project-diagram m-auto text-primary" style="font-size: 80px;"></i>
+          </div>
+          <h3 class="pt-3 pb-1 text-white">Diagrama de proceso</h3>
+          <img [src]=methodology.graph>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="showcase text-black bg-white" *ngIf="methodology.characteristics != null">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg');"></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text p-5">
+        <h2>Características</h2>
+        <ul class="lead mb-0 text-justify text-black" *ngFor="let characteristic of methodology.characteristics">
+          <li>{{ characteristic }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row no-gutters" *ngIf="methodology.advantages != null">
+      <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg');"></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text p-5">
+        <h2>Ventajas</h2>
+        <ul class="lead mb-0 text-justify text-black" *ngFor="let advantage of methodology.advantages">
+          <li>{{ advantage }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row no-gutters"  *ngIf="methodology.disadvantages != null">
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg');"></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text p-5">
+        <h2>Desventajas</h2>
+        <ul class="lead mb-0 text-justify text-black" *ngFor="let disadvantage of methodology.disadvantages">
+          <li>{{ disadvantage }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features-icons bg-light text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12  pt-4">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="fas fa-hands-helping m-auto text-primary" style="font-size: 80px;"></i>
+          </div>
+          <h3 class="pt-3 pb-1" >¡Esperamos que haya sido de ayuda esta información!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mr-5 mb-5" *ngIf="methodology.sources != null">
+    <h3 class="text-left">Fuentes: </h3>
+    <ul class="lead mb-0 text-justify text-muted" *ngFor="let source of methodology.sources">
+      <li>{{ source }}</li>
+    </ul>
+  </div>
+</section>
